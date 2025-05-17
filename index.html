@@ -33,13 +33,28 @@
 </head>
 <body class="font-sans antialiased leading-relaxed">
   <!-- Header / Hero -->
-  <header class="min-h-screen flex flex-col items-center justify-center text-center px-6 sm:px-8 lg:px-16">
-    <div class="mb-6">
-      <img src="./assets/your-icon2.png" alt="Your Icon" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-[var(--accent-start)]" />
+<!-- Header / Hero -->
+<header
+  class="min-h-screen flex flex-col items-center justify-center text-center px-6 sm:px-8 lg:px-16 relative overflow-hidden"
+  style="background: url('./assets/hero-bg.png') center/cover no-repeat;"
+>
+  <!-- 背景画像の上に薄い黒オーバーレイ -->
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <!-- オーバーレイより前面に表示するコンテンツ -->
+  <div class="relative z-10">
+    <div class="mb-6 flex justify-center">
+      <img
+        src="./assets/your-icon2.png"
+        alt="Your Icon"
+        class="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-[var(--accent-start)]"
+      />
     </div>
     <h1 class="font-extrabold text-[clamp(2.5rem,8vw,4rem)] text-white mb-4">TAKU</h1>
-    <p class="max-w-2xl text-base sm:text-lg md:text-xl text-center mb-8 text-[var(--text-secondary)]">
-      20代会社員｜個人開発実践中<br>
+    <p
+      class="max-w-2xl text-base sm:text-lg md:text-xl text-center mb-8 text-[var(--text-secondary)]"
+    >
+      個人開発実践中<br />
       日常で使えるサービス/面白いサービス
     </p>
     <nav class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
@@ -47,7 +62,9 @@
       <a href="#projects" class="accent">Projects</a>
       <a href="#contact" class="accent">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
+
 
   <!-- Skills Section -->
   <section id="skills" class="py-20 px-6 sm:px-8 lg:px-16 bg-[var(--bg-secondary)]">
